@@ -1,0 +1,31 @@
+os: osx
+osx_image: xcode10.1
+language: swift
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+  - DESTINATION="OS=12.1,name=iPhone XS"
+  - SCHEME="TEMPLATE"
+  - WORKSPACE="TEMPLATE.xcworkspace"
+skip_cleanup: true
+
+jobs:
+  include:
+
+  - stage: podspec
+    script:
+    - pod spec lint
+
+  - stage: Build
+    script:
+    - set -o pipefail && xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty
+
+  - stage: Tests
+    script:
+    - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty
