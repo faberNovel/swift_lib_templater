@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require 'swift_lib_templater'
