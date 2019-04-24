@@ -6,11 +6,11 @@ require 'swift_lib_templater/get_framework_name_command.rb'
 require 'swift_lib_templater/rename_files_command.rb'
 require 'swift_lib_templater/initialize_git_repository_command.rb'
 
-module SwiftLibTemplater
-	def systemWithoutOutput(command)
-		system command, ">/dev/null 2>&1"
-	end
+def systemWithoutOutput(command)
+	system command, ">/dev/null 2>&1"
+end
 
+module SwiftLibTemplater
 	begin
 		puts "Framework name ?"
 		project_name = GetFrameworkNameCommand.new.execute
