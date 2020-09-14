@@ -7,12 +7,11 @@ module SwiftLibTemplater
       end
 
       def execute()
-        Dir.chdir(@dir)
         # We need to list all the files before renaming the files because
         # Find.find doesn't like that we mess with the files that are being
         # enumerated
         paths = []
-        Find.find(".") do |path|
+        Find.find(@dir) do |path|
           paths << path
         end
         paths.each do |path|
@@ -22,11 +21,12 @@ module SwiftLibTemplater
           next unless base =~ /(TEMPLATE|TP)/
           File.rename(File.join(new_dir, base), new_path)
         end
-        Find.find(".") do |path|
+        Find.find(@dir) do |path|
           next unless File.file?(path)
           next if File.extname(path) == ".png"
           next if File.extname(path) == ".mobileprovision"
-          systemWithoutOutput("sed -i '' 's/TEMPLATE/#{@project_name}/g' '#{path}'")
+          command = "sed -i \"\" \"s/TEMPLATE/#{@project_name}/g\" \"#{path}\""
+          systemWithoutOutput(command)
         end
       end
     end

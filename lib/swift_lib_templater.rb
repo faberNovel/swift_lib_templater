@@ -1,13 +1,14 @@
 require 'optparse'
 require 'find'
+require 'fileutils'
 
-require 'swift_lib_templater/copy_template_command.rb'
-require 'swift_lib_templater/get_framework_name_command.rb'
-require 'swift_lib_templater/rename_files_command.rb'
-require 'swift_lib_templater/initialize_git_repository_command.rb'
+require_relative 'swift_lib_templater/copy_template_command.rb'
+require_relative 'swift_lib_templater/get_framework_name_command.rb'
+require_relative 'swift_lib_templater/rename_files_command.rb'
+require_relative 'swift_lib_templater/initialize_git_repository_command.rb'
 
 def systemWithoutOutput(command)
-	system command, ">/dev/null 2>&1"
+	system command
 end
 
 module SwiftLibTemplater
@@ -21,10 +22,6 @@ module SwiftLibTemplater
 		print "\nGenerating files... "
 		CopyTemplateCommand.new(project_folder).execute
 		RenameFilesCommand.new(project_folder, project_name).execute
-		puts "✅"
-
-		print "Initializing git... "
-		InitializeGitRepositoryCommand.new(project_folder).execute
 		puts "✅"
 
 		puts "\nProject #{project_name} successfully bootstraped ! 🎉"
