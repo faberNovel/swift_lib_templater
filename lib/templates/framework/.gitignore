@@ -1,10 +1,12 @@
+# OS X
+.DS_Store
+
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+re contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
 build/
-DerivedData
+DerivedData/
 
 ## Various settings
 *.pbxuser
@@ -15,53 +17,52 @@ DerivedData
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
 
-## Other
 *.xccheckout
+profile
+## Other
 *.moved-aside
-*.xcuserstate
+*.xccheckout
+DerivedData
 *.xcscmblueprint
-*.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
-*.xcarchive
-*.app.dSYM.zip
+*.dSYM.zip
+*.dSYM
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+# Bundler
+.bundle
 
+# Swift Package Manager
+.build
+
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+Example/Pods/
 Pods/
 
-##Fastlane
+.idea/
+
 # fastlane specific
 fastlane/report.xml
 
 # deliver temporary files
 fastlane/Preview.html
 
-# scan/snapshot temporary files (default values)
-/metrics
-/tests_derived_data
-/screenshots
+# snapshot generated screenshots
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
 
-#fastlane plugins
-Pluginfile_fastlane
-Gemfile_fastlane
-Gemfile_fastlane.lock
-
-#fastlane build artifacts
-/build
-/derived_data
-
-#metadata
-/fastlane/**/metadata/**/*
-/fastlane/**/screenshots/**/*
-
-##AppCode
-.idea/
+# scan temporary files
+fastlane/test_output
+test_output
+fastlane/.env
+pre-change.yml
+.build
+fastlane/README.md

@@ -10,14 +10,14 @@ Pod::Spec.new do |s|
   s.name             = 'TEMPLATE'
   s.version          = '1.0.0'
   s.summary          = 'TEMPLATE'
-  s.swift_version    = "4.2"
+  s.swift_version    = "5.0"
 
   s.description      = 'TEMPLATE'
 
-  s.homepage         = 'https://github.com/applidium/TEMPLATE'
+  s.homepage         = 'https://github.com/fabernovel/TEMPLATE'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   # s.author           = { 'TEMPLATE' => 'TEMPLATE@fabernovel.com' }
-  s.source           = { :git => 'https://github.com/applidium/TEMPLATE.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/fabernovel/TEMPLATE.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
   s.source_files = 'Source/Classes/**/*'
