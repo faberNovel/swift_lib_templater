@@ -33,26 +33,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E742E3C1223029BF002A2BED /* Controller */ = {
+		E742E3C1223029BF002A2BED /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E742E3C822302B76002A2BED /* ViewController.swift */,
 			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		E742E3C2223029CE002A2BED /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		E742E3C3223029D8002A2BED /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		E7691560222EA78A00FDEE7F = {
@@ -75,9 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				E742E3C422302B4B002A2BED /* AppDelegate.swift */,
-				E742E3C3223029D8002A2BED /* Model */,
-				E742E3C2223029CE002A2BED /* View */,
-				E742E3C1223029BF002A2BED /* Controller */,
+				E742E3C1223029BF002A2BED /* ViewController */,
 				E7691582222EA7C100FDEE7F /* Resources */,
 				E7691581222EA7B400FDEE7F /* Configuration */,
 			);
