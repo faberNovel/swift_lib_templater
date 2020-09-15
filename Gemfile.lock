@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    swift_lib_templater (1.0.1)
+    swift_lib_templater (1.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -17,4 +17,4 @@ DEPENDENCIES
   swift_lib_templater!
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
