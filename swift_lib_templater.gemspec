@@ -6,20 +6,21 @@ require "swift_lib_templater/version"
 Gem::Specification.new do |spec|
   spec.name          = "swift_lib_templater"
   spec.version       = SwiftLibTemplater::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ["Gaétan Zanella"]
   spec.email         = ["gaetan.zanella@fabernovel.com"]
 
-  spec.summary       = %q{Swift library generator}
-  spec.description   = %q{Swift library generator}
-  spec.homepage      = "https://github.com/applidium/swift_lib_templater"
+  spec.summary       = "`swift_lib_templater` generates templates for open source ios libraries."
+  spec.description   = "`swift_lib_templater` generates templates for open source ios libraries. It supports Carthage & SPM & Cocoapods and provides basic CI scripts."
+  spec.homepage      = "https://github.com/fabernovel/swift_lib_templater"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/applidium/swift_lib_templater"
-    spec.metadata["changelog_uri"] = "https://github.com/applidium/swift_lib_templater/blob/master/CHANGELOG.md"
+    spec.metadata["source_code_uri"] = "https://github.com/fabernovel/swift_lib_templater"
+    spec.metadata["changelog_uri"] = "https://github.com/fabernovel/swift_lib_templater/blob/master/CHANGELOG.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

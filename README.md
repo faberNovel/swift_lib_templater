@@ -3,8 +3,8 @@
 `swift_lib_templater` generates templates for open source ios libraries.
 
 - `cocopoads` & `SPM` & `Carthage` support
-- [Basic Github action CI](https://github.com/applidium/swift_lib_templater/blob/master/lib/templates/framework/.github/workflows/ci.yml)
-- [Release script](https://github.com/applidium/swift_lib_templater/blob/master/lib/templates/framework/fastlane/Fastfile)
+- [Basic Github action CI](https://github.com/fabernovel/swift_lib_templater/blob/master/lib/templates/framework/.github/workflows/ci.yml)
+- [Release script](https://github.com/fabernovel/swift_lib_templater/blob/master/lib/templates/framework/fastlane/Fastfile)
 
 ## Installation
 
