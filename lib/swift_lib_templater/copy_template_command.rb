@@ -1,6 +1,8 @@
 module SwiftLibTemplater
   class CopyTemplateCommand
-    def initialize(dest)
+
+    def initialize(template, dest)
+      @template = template
       @dest = dest
     end
 
@@ -9,7 +11,12 @@ module SwiftLibTemplater
         raise "Path #{@dest} already exists"
       end
       Dir.chdir(File.dirname(__FILE__))
-      FileUtils.cp_r("../../lib/templates/framework", @dest)
+      case @template
+      when LibraryTemplate::FRAMEWORK
+        FileUtils.cp_r("../../lib/templates/framework", @dest)
+      when LibraryTemplate::CLI
+        FileUtils.cp_r("../../lib/templates/cli", @dest)
+      end
     end
   end
 end
