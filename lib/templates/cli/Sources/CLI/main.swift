@@ -1,0 +1,2 @@
+
+TEMPLATECommand.main()
